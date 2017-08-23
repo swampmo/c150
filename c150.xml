@@ -20,7 +20,7 @@
         <vtailarea unit="FT2"> 9.35 </vtailarea>
         <vtailarm unit="FT"> 17.8 </vtailarm>
         <location name="AERORP" unit="IN">
-            <x> 79.4 </x>
+            <x> 78.8 </x>
             <y> 0 </y>
             <z> 27.0 </z>
         </location>
@@ -80,7 +80,7 @@
             <location unit="IN">
                 <x> 31.7 </x>
                 <y> 0 </y>
-                <z> -48.43 </z>
+                <z> -50.43 </z>
             </location>
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>

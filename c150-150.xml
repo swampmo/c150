@@ -20,7 +20,7 @@
         <vtailarea unit="FT2"> 9.35 </vtailarea>
         <vtailarm unit="FT"> 17.8 </vtailarm>
         <location name="AERORP" unit="IN">
-            <x> 77.4 </x>
+            <x> 79.8 </x>
             <y> 0 </y>
             <z> 27.0 </z>
         </location>
@@ -45,7 +45,7 @@
         <iyz unit="SLUG*FT2"> 0 </iyz>
         <emptywt unit="LBS"> 1111 </emptywt>
         <location name="CG" unit="IN">
-            <x> 77.4 </x>
+            <x> 79.8 </x>
             <y> 0 </y>
             <z> -15.75 </z>
         </location>
@@ -602,7 +602,7 @@
                        -.1047        -.3244    
                        -.6981E-01    -.1446    
                        -.3491E-01     .2816E-01
-                         .000         .1070    
+                         0000         .1300    
                         .3491E-01     .3044    
                         .6981E-01     .5894    
                         .1396         1.002    

@@ -19,7 +19,7 @@ Modified in 2017 by swamp
 
     <sim>
 
-        <description>Cessna 150L</description>
+        <description>Cessna 150L-160HP</description>
         <author>Harald Johnsen</author>
         <status>beta</status>
 
@@ -63,7 +63,7 @@ The Cessna 150 is the fifth most produced civilian plane ever, with 23,839 aircr
 
 
         <flight-model archive="y">jsb</flight-model>
-        <aero archive="y">c150</aero>
+        <aero archive="y">c150-160</aero>
 
         <model>
             <path archive="y">Aircraft/c150/Models/c150.xml</path>

@@ -194,7 +194,7 @@
 
     </ground_reactions>
     <propulsion>
-        <engine file="eng_O-200">
+        <engine file="eng_O-320-A2A">
             <location unit="IN">
                 <x> 12 </x>
                 <y> 0 </y>
@@ -207,7 +207,7 @@
             </orient>
             <feed>0</feed>
             <feed>1</feed>
-            <thruster file="prop_mccauley_6948">
+            <thruster file="Sensenich-74DM6">
                 <location unit="IN">
                     <x> -3.3 </x>
                     <y> 0 </y>

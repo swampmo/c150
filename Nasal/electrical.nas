@@ -143,7 +143,7 @@ ElectricalCircuit.addBreaker( Breaker.new(name:"PITOT HT + BCN breaker", power:2
 ElectricalCircuit.addBreaker( Breaker.new(name:"STROBE breaker", power:10, # ?
             property:"/controls/circuit-breakers/strobe") );
 
-ElectricalCircuit.addBreaker( Breaker.new(name:"LDG LTS breaker", power:20,
+ElectricalCircuit.addBreaker( Breaker.new(name:"LDG LTS breaker", power:60,
             property:"/controls/circuit-breakers/landing") );
 
 ElectricalCircuit.addBreaker( Breaker.new(name:"FLAPS SLO/BLO breaker", power:15,
@@ -153,7 +153,7 @@ ElectricalCircuit.addBreaker( Breaker.new(name:"Alternator breaker", power:15, #
             property:"/controls/circuit-breakers/alternator") );
 
 
-var masterBreaker = Breaker.new(name:"Master breaker", power:50,
+var masterBreaker = Breaker.new(name:"Master breaker", power:300,
             property:"/controls/circuit-breakers/master");
 
 ElectricalCircuit.addBreaker( masterBreaker );
@@ -187,7 +187,7 @@ ElectricalCircuit.addOutput( Output.new(name:"Strobe Lights", power:3,
             switch:"controls/lighting/strobe",
             breaker:"/controls/circuit-breakers/strobe") );
 
-ElectricalCircuit.addOutput( Output.new(name:"LDG LTS", power:20, 
+ElectricalCircuit.addOutput( Output.new(name:"LDG LTS", power:50, 
             property:"/systems/electrical/outputs/landing-light",
             switch:"controls/lighting/landing-lights",
             breaker:"/controls/circuit-breakers/landing") );

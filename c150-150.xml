@@ -20,7 +20,7 @@
         <vtailarea unit="FT2"> 9.35 </vtailarea>
         <vtailarm unit="FT"> 17.8 </vtailarm>
         <location name="AERORP" unit="IN">
-            <x> 76.8 </x>
+            <x> 78.8 </x>
             <y> 0 </y>
             <z> 27.0 </z>
         </location>
@@ -45,7 +45,7 @@
         <iyz unit="SLUG*FT2"> 0 </iyz>
         <emptywt unit="LBS"> 1111 </emptywt>
         <location name="CG" unit="IN">
-            <x> 77.8 </x>
+            <x> 78.8 </x>
             <y> 0 </y>
             <z> -15.75 </z>
         </location>
@@ -85,8 +85,8 @@
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
-      <spring_coeff unit="LBS/FT"> 1700 </spring_coeff>
-      <damping_coeff unit="LBS/FT/SEC"> 400 </damping_coeff>
+      <spring_coeff unit="LBS/FT"> 2000 </spring_coeff>
+      <damping_coeff unit="LBS/FT/SEC"> 800 </damping_coeff>
       <damping_coeff_rebound unit="LBS/FT/SEC"> 2000 </damping_coeff_rebound>
             <max_steer unit="DEG"> 8 </max_steer>
             <brake_group> NONE </brake_group>

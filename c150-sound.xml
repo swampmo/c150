@@ -63,7 +63,7 @@
         <path>Sounds/0-320-A2A.wav</path>
         <property>/engines/engine/running</property>
         <volume>
-            <property>/engines/engine/mp-osi</property>
+            <property>/engines/engine/rpm</property>
             <factor>0.00375</factor>
             <min>0.15</min>
             <max>0.7</max>
@@ -77,7 +77,7 @@
         <volume>
             <property>/sim/current-view/internal</property>
             <offset>1.0</offset>
-            <factor>-0.7</factor>
+            <factor>-0.6</factor>
         </volume>
         <volume>
             <property>sim/model/c150/sound/doorsk</property>
@@ -90,10 +90,10 @@
             <!-- 0.00049 = 1/2040 reference sound wasp.wav recorded @ 2040 RPM -->
             <!-- 0.000427 = 1/2340 reference sound Engine_Continental-O200A.wav -->
             <!-- factor>0.000427</factor-->
-            <factor>0.00049</factor>
+            <factor>0.00048</factor>
             <min>0.1</min>
             <max>1.0</max>
-            <offset>0.01</offset>
+            <offset>0.1</offset>
         </pitch>
     </engine>
 

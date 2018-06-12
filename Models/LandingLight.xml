@@ -5,14 +5,56 @@
 <PropertyList>
 
  <path>LandingLight.ac</path>
-<nopreview/>
+ <nopreview/>
 
-<!--   Landing Light  -->
-    <animation>
-	<type>select</type>
-	<object-name>landing_light_spot</object-name>
-	<object-name>phare</object-name>
-	<condition>
+ <animation>
+ <type>dist-scale</type>
+ <object-name>phare</object-name>
+ <interpolation>
+ <entry>
+ <ind>0</ind>
+ <dep>1.0</dep>
+ </entry>
+
+ <entry>
+ <ind>5000</ind>
+ <dep>15.0</dep>
+ </entry>
+ </interpolation>
+ </animation>
+
+ <animation>
+ <type>noshadow</type>
+ <object-name>phare</object-name>
+ </animation>
+
+ <effect>
+ <inherits-from>Effects/model-transparent</inherits-from>
+ <object-name>phare</object-name>
+ </effect>
+
+ <animation>
+ <type>rotate</type>
+ <object-name>phare</object-name>
+ <offset-deg>-90</offset-deg>
+
+ -<center>
+ <x-m>0</x-m>
+ <y-m>0</y-m>
+ <z-m>0</z-m>
+ </center>
+
+ <axis>
+<x>0.0</x>
+<y>0.0</y>
+<z>1.0</z>
+</axis>
+ </animation>
+
+ <animation>
+ <type>select</type>
+
+ <condition>
 		<property>controls/lighting/landing-lights</property>
 	</condition>
    </animation>
@@ -22,9 +64,10 @@
 	<type>material</type>
 	<object-name>phare</object-name>
 	<transparency>
-	   <alpha>0.1</alpha>
-	   <factor-prop>sim/model/material/LandingLight/factor</factor-prop>  
-	</transparency>
+	   	   <factor-prop>sim/model/material/LandingLight/factor</factor-prop>
+         <factor>1</factor>
+         <offset>0</offset>
+  </transparency>
    </animation>
 
    <animation>
@@ -42,11 +85,11 @@
 	   <z-m>0.0</z-m>
 	</center>
 	<axis>
-	   <x>-1</x>
-	   <y>0.0</y>
-	   <z>-0.1</z>
+	   <x>0.0</x>
+	   <y>1</y>
+	   <z>0.0</z>
 	</axis>
-	<power>50</power>
+	<power>500</power>
 	<factor>1</factor>
 	<offset>0</offset>
 	<two-sides type="bool">false</two-sides>
@@ -65,92 +108,42 @@
 	</emission>
    </animation>
 
-   <animation>
-	<type>material</type>
-	<object-name>landing_light_spot</object-name>
-	<emission>
-	   <red>0.98</red>
-	   <green>0.84</green>
-	   <blue>0.84</blue>
-	   <factor-prop>sim/model/material/LandingLight/factorAGL</factor-prop>
-	</emission>
-   </animation>
+  <animation>
+     <type>scale</type>
+     <object-name>phare</object-name>
+     <property>/sim/time/sun-angle-rad</property>
+     <x-min>1.0</x-min>
+     <y-min>1.0</y-min>
+     <z-min>1.0</z-min>
+     <x-offset>-1</x-offset>
+     <y-offset>-1</y-offset>
+     <z-offset>-1</z-offset>
+     <x-factor>1</x-factor>
+     <y-factor>1</y-factor>
+     <z-factor>1</z-factor>
+     </animation>
 
-   <animation>
-	<type>rotate</type>
-	<object-name>landing_light_spot</object-name>
-	<property>orientation/pitch-deg</property>
-	<factor>-1</factor>
-	<center>
-	   <x-m>-10.391</x-m>
-	   <y-m>0.0</y-m>
-	   <z-m>-0.750</z-m>
-	</center>
-	<axis>
-	   <x>0.0</x>
-	   <y>1.0</y>
-	   <z>0.0</z>
-	</axis>
-   </animation>
+  <animation>
+     <type>flash</type>
+     <object-name>phare</object-name>
+     <offset>0.0</offset>
+     <factor>1.0</factor>
+    <power>2</power>
+     <two-sides type="bool">false</two-sides>
+     <min>0.0</min>
+     <max>1.0</max>
 
-   <animation>
-	<type>rotate</type>
-	<object-name>landing_light_spot</object-name>
-	<property>orientation/roll-deg</property>
-	<factor>1</factor>
-	<center>
-	   <x-m>0.0</x-m>
-	   <y-m>0.0</y-m>
-	   <z-m>-0.750</z-m>
-	</center>
-	<axis>
-	   <x>1.0</x>
-	   <y>0.0</y>
-	   <z>0.0</z>
-	</axis>
-   </animation>
+  <center>
+     <x-m>0.0</x-m>
+     <y-m>0.0</y-m>
+     <z-m>0.0</z-m>
+     </center>
 
-   <animation>
-	<type>translate</type>
-	<object-name>landing_light_spot</object-name>
-	<property>position/gear-agl-ft</property>
-	<factor>1.0</factor>
-	<axis>
-	  <x>-1.0</x>
-	  <y>0.0</y>
-	  <z>-0.088</z>
-	</axis>
-   </animation>
-
-   <animation>
-	<type>translate</type>
-	<object-name>landing_light_spot</object-name>
-	<property>orientation/pitch-deg</property>
-	<factor>1.0</factor>
-	<axis>
-	   <x>-1.0</x>
-	   <y>0.0</y>
-	   <z>-0.088</z>
-	</axis>
-   </animation>
-
-    <animation>
-        <type>dist-scale</type>
-	<object-name>landing_light_spot</object-name>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0.5</dep>
-            </entry>
-            <entry>
-                <ind>20</ind>
-                <dep>1</dep>
-            </entry>
-            <entry>
-                <ind>1500</ind>
-                <dep>10</dep>
-            </entry>
-        </interpolation>
+   <axis>
+     <x>0.0</x>
+      <y>-1.0</y>
+     <z>0.0</z>
+      </axis>
     </animation>
-             
-</PropertyList>
+
+   </PropertyList>

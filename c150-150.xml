@@ -193,7 +193,10 @@
         </contact>
 
     </ground_reactions>
-    <propulsion>
+ 
+<system file="Aircraftcontrol"/>
+
+   <propulsion>
         <engine file="0-320-A2A">
             <location unit="IN">
                 <x> 12 </x>
@@ -241,179 +244,7 @@
             <density unit="LBS/GAL"> 6.01 </density>            
         </tank>
     </propulsion>
-    <flight_control name="FCS: c150">
-     <channel name="All">
-
-        <summer name="Pitch Trim Sum">
-            <input>fcs/elevator-cmd-norm</input>
-            <input>fcs/pitch-trim-cmd-norm</input>
-            <clipto>
-                <min>-1</min>
-                <max>1</max>
-            </clipto>
-        </summer>
-
-        <aerosurface_scale name="Elevator Control">
-            <input>fcs/pitch-trim-sum</input>
-            <gain>0.01745</gain>
-            <range>
-                <min>-26</min>
-                <max>17</max>
-            </range>
-            <output>fcs/elevator-pos-rad</output>
-        </aerosurface_scale>
-            <aerosurface_scale name="Elevator Position Normalized">
-                <input>fcs/elevator-pos-deg</input>
-                <domain>
-  	            <min>-26</min>
-  	            <max>23</max>
-                </domain>
-                <range>
-                    <min>-1</min>
-                    <max>1</max>
-                </range>
-                <output>fcs/elevator-pos-norm</output>
-            </aerosurface_scale>
-
-        <summer name="Roll Trim Sum">
-            <input>fcs/aileron-cmd-norm</input>
-            <input>fcs/roll-trim-cmd-norm</input>
-            <clipto>
-                <min>-1</min>
-                <max>1</max>
-            </clipto>
-        </summer>
-
-        <aerosurface_scale name="Left Aileron Control">
-            <input>fcs/roll-trim-sum</input>
-            <gain>0.01745</gain>
-            <range>
-                <min>-20</min>
-                <max>14</max>
-            </range>
-            <output>fcs/left-aileron-pos-rad</output>
-        </aerosurface_scale>
-            <aerosurface_scale name="Left Aileron Position Normalized">
-                <input>fcs/left-aileron-pos-deg</input>
-                <domain>
-  	            <min>-20</min>
-  	            <max>14</max>
-                </domain>
-                <range>
-                    <min>-1</min>
-                    <max>1</max>
-                </range>
-                <output>fcs/left-aileron-pos-norm</output>
-            </aerosurface_scale>
-
-        <aerosurface_scale name="Right Aileron Control">
-            <input>fcs/roll-trim-sum</input>
-            <gain>-0.01745</gain>
-            <range>
-                <min>-20</min>
-                <max>14</max>
-            </range>
-            <output>fcs/right-aileron-pos-rad</output>
-        </aerosurface_scale>
-            <aerosurface_scale name="Right Aileron Position Normalized">
-                <input>fcs/right-aileron-pos-deg</input>
-                <domain>
-  	            <min>-20</min>
-  	            <max>14</max>
-                </domain>
-                <range>
-                    <min>-1</min>
-                    <max>1</max>
-                </range>
-                <output>fcs/right-aileron-pos-norm</output>
-            </aerosurface_scale>
-
-        <summer name="Rudder Command Sum">
-            <input>fcs/rudder-cmd-norm</input>
-            <input>fcs/yaw-trim-cmd-norm</input>
-            <clipto>
-                <min>-1</min>
-                <max>1</max>
-            </clipto>
-        </summer>
-
-        <aerosurface_scale name="Rudder Control">
-            <input>fcs/rudder-command-sum</input>
-            <gain>0.01745</gain>
-            <range>
-                <min>-23</min>
-                <max>23</max>
-            </range>
-            <output>fcs/rudder-pos-rad</output>
-        </aerosurface_scale>
-            <aerosurface_scale name="Rudder Position Normalized">
-                <input>fcs/rudder-pos-deg</input>
-                <domain>
-  	            <min>-23</min>
-  	            <max>23</max>
-                </domain>
-                <range>
-                    <min>-1</min>
-                    <max>1</max>
-                </range>
-                <output>fcs/rudder-pos-norm</output>
-            </aerosurface_scale>
-
-        <kinematic name="Flaps Control">
-            <input>fcs/flap-cmd-norm</input>
-            <traverse>
-                <setting>
-                    <position>0</position>
-                    <time>0</time>
-                </setting>
-                <setting>
-                    <position>10</position>
-                    <time>1</time>
-                </setting>
-                <setting>
-                    <position>20</position>
-                    <time>1</time>
-                </setting>
-                <setting>
-                    <position>30</position>
-                    <time>1</time>
-                </setting>
-                <setting>
-                    <position>40</position>
-                    <time>1</time>
-                </setting>
-            </traverse>
-            <output>fcs/flap-pos-deg</output>
-        </kinematic>
-            <aerosurface_scale name="Flap Position Normalizer">
-              <input>fcs/flap-pos-deg</input>
-              <domain>
-                <min>0</min>  <!-- Flaps actual minimum position -->
-                <max>40</max>  <!-- Flaps actual maximum position -->
-              </domain>
-              <range>
-                <min>0</min>  <!-- Flaps normalized minimum position -->
-                <max>1</max>  <!-- Flaps normalized maximum position -->
-              </range>
-              <output>fcs/flap-pos-norm</output>
-            </aerosurface_scale>
-
-        <kinematic name="Speedbrake Control">
-            <input>fcs/speedbrake-cmd-norm</input>
-            <traverse>
-                <setting>
-                    <position>0</position>
-                    <time>0</time>
-                </setting>
-                <setting>
-                    <position>1</position>
-                    <time>1</time>
-                </setting>
-            </traverse>
-            <output>fcs/speedbrake-pos-norm</output>
-        </kinematic>
-     </channel>
-    </flight_control>
+ 
     <aerodynamics>
 
       <alphalimits unit="DEG">
@@ -735,7 +566,7 @@
                       <table>
                           <independentVar>velocities/mach</independentVar>
                           <tableData>
-                              0.0000	-1.1000	
+                              0.0000	-1.0000	
                               2.0000	-0.2750	
                           </tableData>
                       </table>
@@ -749,7 +580,7 @@
                     <property>metrics/cbarw-ft</property>
                     <property>aero/ci2vel</property>
                     <property>velocities/q-aero-rad_sec</property>
-                    <value>-12.4000</value>
+                    <value>-12.9000</value>
                 </product>
             </function>
             <function name="aero/coefficient/Cmadot">

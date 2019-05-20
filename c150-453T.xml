@@ -194,7 +194,7 @@
 
     </ground_reactions>
     <propulsion>
-        <engine file="0-320-A2A">
+        <engine file="453T">
             <location unit="IN">
                 <x> 12 </x>
                 <y> 0 </y>

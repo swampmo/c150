@@ -187,7 +187,7 @@ ElectricalCircuit.addOutput( Output.new(name:"Strobe Lights", power:3,
             switch:"controls/lighting/strobe",
             breaker:"/controls/circuit-breakers/strobe") );
 
-ElectricalCircuit.addOutput( Output.new(name:"LDG LTS", power:50, 
+ElectricalCircuit.addOutput( Output.new(name:"LDG LTS", power:10, 
             property:"/systems/electrical/outputs/landing-light",
             switch:"controls/lighting/landing-lights",
             breaker:"/controls/circuit-breakers/landing") );

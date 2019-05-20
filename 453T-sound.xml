@@ -60,7 +60,7 @@
         <mode>looped</mode>
      <!--  
    <path>Sounds/wasp.wav</path> -->
-        <path>Sounds/0-320-A2A.wav</path>
+        <path>Sounds/453T.wav</path>
         <property>/engines/engine/running</property>
         <volume>
             <property>/engines/engine/rpm</property>
@@ -90,9 +90,9 @@
             <!-- 0.00049 = 1/2040 reference sound wasp.wav recorded @ 2040 RPM -->
             <!-- 0.000427 = 1/2340 reference sound Engine_Continental-O200A.wav -->
             <!-- factor>0.000427</factor-->
-            <factor>0.000427</factor>
-            <min>0.1</min>
-            <max>1.2</max>
+            <factor>0.00048</factor>
+            <min>0.0</min>
+            <max>0.75</max>
             <offset>0.1</offset>
         </pitch>
     </engine>

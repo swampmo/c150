@@ -19,7 +19,7 @@ Modified in 2017 by swamp
 
     <sim>
 
-        <description>Cessna 150L-180HP</description>
+        <description>Cessna 150L-453T</description>
         <author>Harald Johnsen</author>
         <status>beta</status>
 
@@ -63,10 +63,10 @@ The Cessna 150 is the fifth most produced civilian plane ever, with 23,839 aircr
 
 
         <flight-model archive="y">jsb</flight-model>
-        <aero archive="y">c150-180</aero>
+        <aero archive="y">c150-150</aero>
 
         <model>
-            <path archive="y">Aircraft/c150/Models/c150.xml</path>
+            <path archive="y">Aircraft/c150/Models/c150-453T.xml</path>
             <c150>
                 <doors>
                     <door>
@@ -315,7 +315,7 @@ The Cessna 150 is the fifth most produced civilian plane ever, with 23,839 aircr
     </flaps>
 
         <sound>
-            <path archive="y">Aircraft/c150/c150-sound.xml</path>
+            <path archive="y">Aircraft/c150/453T-sound.xml</path>
             <c150-engine>
                 <volume type="double">0.7</volume>
             </c150-engine>
@@ -382,7 +382,7 @@ The Cessna 150 is the fifth most produced civilian plane ever, with 23,839 aircr
                     <label>Sound</label>
                     <binding>
                         <command>dialog-show</command>
-                        <dialog-name>c150-sound</dialog-name>
+                        <dialog-name>453T-sound</dialog-name>
                     </binding>
                 </item>
                 <item>
@@ -494,7 +494,7 @@ The Cessna 150 is the fifth most produced civilian plane ever, with 23,839 aircr
 
     <engines>
         <engine>
-            <rpm type="double">800</rpm>
+            <rpm type="double">400</rpm>
             <running type="bool">true</running>
         </engine>
     </engines>
@@ -560,7 +560,7 @@ The Cessna 150 is the fifth most produced civilian plane ever, with 23,839 aircr
             <file>Aircraft/Generic/updateloop.nas</file>
             <file>Aircraft/c150/Nasal/electrical.nas</file>
             <file>Aircraft/c150/Nasal/perf-test.nas</file>
-            <file>Aircraft/c150/Nasal/c150.nas</file>
+            <file>Aircraft/c150/Nasal/c150-453T.nas</file>
             <!--file>Aircraft/c150/Nasal/sound.nas</file-->
             <file>Aircraft/Generic/limits.nas</file>
             <file>Aircraft/c150/Nasal/immat.nas</file>

@@ -103,6 +103,8 @@
         <object-name>LDoor-ext</object-name>
         <object-name>NoseProp</object-name>
         <object-name>AccessPanel</object-name>
+
+        <object-name>noseLight</object-name>
         
         <object-name>toit</object-name>
         <object-name>Fuselage</object-name>
@@ -118,7 +120,7 @@
         
     </effect>
 
-	<!--effect>
+	<effect>
         <inherits-from>Effects/exterior/fuselage-bump</inherits-from>
         <object-name>Fuselage</object-name>
         <object-name>Fuselage-tail</object-name>
@@ -127,7 +129,7 @@
         <object-name>RWing</object-name>
         <object-name>LWing</object-name>
         <object-name>wingfix</object-name>
-    </effect-->
+    </effect>
 
 
 
@@ -172,6 +174,28 @@
   <object-name>LDoor-ext</object-name>
   <ior>1.2</ior>
  </animation-->
+
+<!-- Landing Light -->
+ <model>
+  <name>LandingLight</name>
+  <path>Aircraft/c150/Models/LandingLight.xml</path>
+  <offsets>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.15892</z-m>
+  </offsets>
+ </model>
+
+ <animation>
+  <type>material</type>
+  <object-name>noseLight</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>1.0</green>
+   <blue>1.0</blue>
+   <factor-prop>controls/lighting/landing-lights</factor-prop>
+  </emission>
+ </animation>
 
  <animation>
   <type>noshadow</type>
@@ -995,7 +1019,7 @@
     </animation>
     
     <!--Breakers-->
-<!--    <animation>
+   <animation>
         <type>pick</type>
         <object-name>landingltbreaker</object-name>
         <visible>true</visible>
@@ -1326,7 +1350,7 @@
         <axis>
             <x>1</x>
         </axis>
-    </animation>-->
+    </animation>
     
     
     
@@ -1454,14 +1478,14 @@
  </animation>
 
 
- <!--animation>
+ <animation>
   <name>BeaconFlasher</name>
   <nopreview/>
   <type>timed</type>
   <object-name>BeaconOff</object-name>
   <object-name>BeaconOn</object-name>
   <duration-sec>1.0</duration-sec>
- </animation-->
+ </animation>
 
     <animation>
         <type>translate</type>
@@ -2692,7 +2716,7 @@
         </offsets>
     </model>
   
-    <!--
+    
     <model>
         <path>Aircraft/c150/Models/Panel/Instruments/vor/vor2.xml</path>
         <offsets>
@@ -2701,7 +2725,7 @@
             <z-m>0.096</z-m>
         </offsets>
     </model>
-    -->
+    
     
     <model>
         <path>Aircraft/c150/Models/Panel/Instruments/adf/adf.xml</path>

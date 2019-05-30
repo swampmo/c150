@@ -2701,7 +2701,7 @@
 <model>
 	<path>Aircraft/Instruments-3d/garmin196/garmin196_support1.xml</path>
 	<offsets>
-            <x-m>1.665</x-m>
+            <x-m>1.600</x-m>
             <y-m>0.175</y-m>
             <z-m>0.380</z-m>
         </offsets>
